@@ -1,9 +1,6 @@
 name: "Sonar build"
 
 on:
-    push:
-        branches:
-            - main
     pull_request:
         types: [opened, synchronize, reopened]
         paths-ignore:
@@ -39,4 +36,4 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
                   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
                   SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-                run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=sonar-wave-demo_WebGoat_AYih4S9eiLGZ6jAx1k5A
+                run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=sonar-wave-demo_WebGoat_AYiiBjWwiLGZ6jAx1k5g
