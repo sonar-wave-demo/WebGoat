@@ -73,7 +73,6 @@ public class Assignment5 extends AssignmentEndpoint {
                   + "'");
       ResultSet resultSet2 = statement2.executeQuery();
 
-
       if (resultSet.next()) {
         return success(this).feedback("challenge.solved").feedbackArgs(flags.getFlag(5)).build();
       } else {
